@@ -23,7 +23,7 @@ public class ListenerConfig {
 	@Bean
 	ConcurrentKafkaListenerContainerFactory<String, MessageEntity> kafkaListenerContainerFactory() {
 		ConcurrentKafkaListenerContainerFactory<String, MessageEntity> factory = new ConcurrentKafkaListenerContainerFactory<>();
-		factory.setConsumerFactory(null);
+		factory.setConsumerFactory(consumerFactory());
 
 		return factory;
 	}
